@@ -14,7 +14,7 @@ export class ChatComponent implements OnInit {
     'Hello',
     'How are you?'
   ];
-  socket = io('http://localhost:3000');
+  socket = io('https://chat1003.herokuapp.com/');
   constructor() { }
 
   ngOnInit() {
