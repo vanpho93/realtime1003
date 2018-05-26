@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import io from 'socket.io-client';
 
 @Component({
   selector: 'app-chat',
@@ -12,6 +13,7 @@ export class ChatComponent implements OnInit {
     'Hello',
     'How are you?'
   ];
+  socket = io('http://localhost:3000');
   constructor() { }
 
   ngOnInit() {
