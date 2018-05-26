@@ -6,6 +6,7 @@ import io from 'socket.io-client';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
+
 export class ChatComponent implements OnInit {
   txtMessage = '';
   messages: string[] = [
@@ -17,10 +18,12 @@ export class ChatComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.socket.on('SERVER_SEND_MESSAGE', message => this.messages.push(message));
   }
 
   sendMessage() {
-    this.messages.push(this.txtMessage);
+    this.socket.emit('CLIENT_SEND_MESSAGE', this.txtMessage);
     this.txtMessage = '';
+    // this.messages.push(this.txtMessage);
   }
 }
