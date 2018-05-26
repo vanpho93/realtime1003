@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { MyJsonPipe } from './my-json.pipe';
+import { RoundPipe } from './round.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     PipesComponent,
-    MyJsonPipe
+    MyJsonPipe,
+    RoundPipe
   ],
   imports: [
     BrowserModule,
