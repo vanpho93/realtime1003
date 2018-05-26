@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { MyJsonPipe } from './my-json.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    PipesComponent,
+    MyJsonPipe
   ],
   imports: [
     BrowserModule,
