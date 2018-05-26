@@ -1,0 +1,11 @@
+<div style="margin: 10px; width: 300px;">
+  <input
+    class="form-control"
+    placeholder="Enter your message"
+    [(ngModel)]="txtMessage"
+    (keyup.enter)="sendMessage();"
+  >
+</div>
+<div *ngFor="let message of messages">
+  <p class="text-info">{{ message }}</p>
+</div>
